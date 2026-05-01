@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Іван Чернієвський — графічний дизайнер та веб-розробник</title>
+    <meta
+      name="description"
+      content="Портфоліо графічного дизайнера: логотипи, айдентика, брендинг, обкладинки, банери, презентації та промо-графіка."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Outfit:wght@400;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <canvas id="motion-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header reveal-header">
+      <a class="brand" href="#top" aria-label="Головна сторінка">
+        <span class="brand-mark">
+          <img src="mylogo.png" alt="Chernievsky Ivan logo" />
+        </span>
+        <span class="brand-text">
+          <strong>Chernievsky Ivan</strong>
+          <small data-i18n="brand-role">Графічний дизайнер та веб-дизайнер</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основна навігація">
+        <a href="#services" data-i18n="nav-services">Послуги</a>
+        <a href="#work" data-i18n="nav-work">Роботи</a>
+        <a href="#process" data-i18n="nav-process">Процес</a>
+        <a href="#contact" data-i18n="nav-contact">Контакти</a>
+      </nav>
+
+      <div class="lang-switcher">
+        <button data-lang="uk" onclick="changeLang('uk')" class="active">UK</button>
+        <button data-lang="en" onclick="changeLang('en')">EN</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero-dash reveal" aria-labelledby="hero-title">
+        <div class="hero-copy-dash">
+          <h1 id="hero-title" class="title-dash" data-i18n="hero-title-dash">
+            ГРАФІЧНИЙ<br/><span class="grad">ДИЗАЙНЕР</span><br/>& WEB-DEV
+          </h1>
+          <p class="hero-lead-dash" data-i18n="hero-lead-dash">
+            Створюю логотипи, айдентику, банери, обкладинки, сайти та візуальний стиль для брендів.
+          </p>
+
+          <div class="hero-actions-dash">
+            <a class="btn-dash primary" href="#work">
+              <span data-i18n="btn-view-work">VIEW WORK</span> <span class="arrow">↗</span>
+            </a>
+            <a class="btn-dash secondary" href="#contact">
+              <span data-i18n="btn-contact">CONTACT</span> <span class="arrow">↗</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong data-i18n="stat-1-val">06+</strong>
+              <span data-i18n="stat-1-label">YEARS EXPERIENCE</span>
+            </div>
+            <div>
+              <strong data-i18n="stat-2-val">45+</strong>
+              <span data-i18n="stat-2-label">PROJECTS</span>
+            </div>
+            <div>
+              <strong data-i18n="stat-3-val">18+</strong>
+              <span data-i18n="stat-3-label">CLIENTS</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="ticker hero-ticker" aria-label="Напрямки роботи">
+          <div class="ticker-track">
+            <span data-i18n="ticker-1">Логотипи</span>
+            <span data-i18n="ticker-2">Айдентика</span>
+            <span data-i18n="ticker-3">Веб-дизайн</span>
+            <span data-i18n="ticker-4">Поліграфія</span>
+            <span data-i18n="ticker-5">Обкладинки</span>
+            <span data-i18n="ticker-6">Банери</span>
+            <span data-i18n="ticker-7">Промо-сайти</span>
+            <span data-i18n="ticker-8">Брендинг</span>
+          </div>
+        </section>
+
+        <div class="hero-visual-dash" aria-label="Портрет">
+          <div class="dash-card">
+            <div class="dash-bg">
+              <img src="https://github.com/0dych.png?size=800" alt="Avatar bg" />
+              <div class="dash-overlay"></div>
+            </div>
+            
+            <div class="dash-header">
+              <div class="badge-dash">
+                <span class="status-dot blue"></span> <span data-i18n="badge-available">AVAILABLE</span>
+              </div>
+              <div class="header-right">
+                <span data-i18n="badge-based">BASED IN WORLDWIDE</span> <span class="globe-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="dash-center-content">
+              <div class="dash-editor-widget">
+                <div class="editor-header">
+                  <span>index.js</span>
+                  <div class="dots"><span></span><span></span><span></span></div>
+                </div>
+                <div class="editor-body">
+                  <span class="kw">const</span> developer <span class="op">=</span> {<br>
+                  &nbsp;&nbsp;name: <span class="str">"Graphic Designer"</span>,<br>
+                  &nbsp;&nbsp;skills: [<span class="str">"Logos"</span>, <span class="str">"Branding"</span>,<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Banners"</span>, <span class="str">"Websites"</span>,<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Web Services"</span>],<br>
+                  &nbsp;&nbsp;focus: <span class="str">"Visual style<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and websites"</span>,<br>
+                  &nbsp;&nbsp;available: <span class="kw blue">true</span><br>
+                  };<br><br>
+                  create_visuals();<br>
+                  <span class="cursor">> |</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-expertise">
+              <span class="ex-title" data-i18n="expertise-title">EXPERTISE</span>
+              <div class="ex-tags">
+                <span data-i18n="tag-1">ЛОГОТИПИ</span>
+                <span data-i18n="tag-2">БРЕНДИНГ</span>
+                <span data-i18n="tag-3">БАНЕРИ</span>
+                <span data-i18n="tag-4">САЙТИ</span>
+                <span data-i18n="tag-5">ВЕБ-СЕРВІСИ</span>
+              </div>
+            </div>
+
+            <div class="dash-footer">
+              <div class="graph-anim">
+                <div class="g-circle c1"></div>
+                <div class="g-circle c2"></div>
+                <div class="g-circle c3"></div>
+                <div class="g-dot-pink"></div>
+                <div class="g-dot-blue"></div>
+              </div>
+              <div class="footer-desc">
+                <strong data-i18n="footer-tags">ЛОГОТИПИ · БРЕНДИНГ · САЙТИ</strong>
+                <p data-i18n="footer-desc">Створюю айдентику, обкладинки, банери, сайти та веб-сервіси для брендів.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services-section services-combo reveal" aria-labelledby="quick-offer-title">
+        <div class="quick-offer">
+        <div class="quick-offer-head">
+          <div class="badge-dash">
+            <span class="status-dot blue"></span>
+            <span data-i18n="quick-badge">Що я роблю</span>
+          </div>
+          <h2 id="quick-offer-title" data-i18n="quick-title">Від айдентики до готового веб-продукту</h2>
+        </div>
+        <div class="quick-offer-grid">
+          <article class="quick-offer-card reveal-item">
+            <span>01</span>
+            <h3 data-i18n="quick-1-title">Айдентика та логотипи</h3>
+            <p data-i18n="quick-1-desc">Логотип, кольори, типографіка і базова система стилю для бренду.</p>
+          </article>
+          <article class="quick-offer-card reveal-item" style="transition-delay: 90ms">
+            <span>02</span>
+            <h3 data-i18n="quick-2-title">Сайти та лендинги</h3>
+            <p data-i18n="quick-2-desc">Адаптивні сторінки, портфоліо, промо-сайти і презентація послуг.</p>
+          </article>
+          <article class="quick-offer-card reveal-item" style="transition-delay: 180ms">
+            <span>03</span>
+            <h3 data-i18n="quick-3-title">E-commerce / web-сервіси</h3>
+            <p data-i18n="quick-3-desc">Каталоги, адмінки, CRM/EDMS-інтерфейси, інтерактивні демо та web-продукти.</p>
+          </article>
+        </div>
+        </div>
+
+        <div class="service-formats" aria-labelledby="services-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot"></span>
+            <span data-i18n="services-badge">Послуги</span>
+          </div>
+          <h2 id="services-title" data-i18n="services-title">Формати роботи, які можна замовити</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="reveal-item" data-service-mark="LOGO">
+            <span class="service-index">01</span>
+            <h3 data-i18n="srv-1-title">Логотипи та айдентика</h3>
+            <p data-i18n="srv-1-desc">Розробляю логотип, кольори, шрифти й базові правила стилю, щоб бренд виглядав впізнавано в соцмережах, на сайті та в рекламі.</p>
+          </article>
+          <article class="reveal-item" data-service-mark="PROMO" style="transition-delay: 100ms">
+            <span class="service-index">02</span>
+            <h3 data-i18n="srv-2-title">Банери та промо-графіка</h3>
+            <p data-i18n="srv-2-desc">Створюю рекламні банери, обкладинки, афіші, креативи для постів і сторіс, які швидко читаються та тримають єдиний стиль.</p>
+          </article>
+          <article class="reveal-item" data-service-mark="WEB" style="transition-delay: 200ms">
+            <span class="service-index">03</span>
+            <h3 data-i18n="srv-3-title">Сайти та веб-сервіси</h3>
+            <p data-i18n="srv-3-desc">Проєктую й збираю лендінги, портфоліо та прості веб-сервіси з чистою структурою, адаптивністю, формами й готовністю до запуску.</p>
+          </article>
+          <article class="reveal-item" data-service-mark="EDIT" style="transition-delay: 300ms">
+            <span class="service-index">04</span>
+            <h3 data-i18n="srv-4-title">Редизайн та підготовка</h3>
+            <p data-i18n="srv-4-desc">Оновлюю старі макети, приводжу графіку до одного стилю, готую файли для публікації, друку або передачі команді.</p>
+          </article>
+        </div>
+        </div>
+      </section>
+
+      <section id="work" class="section work-section reveal" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot blue"></span>
+            <span>Behance portfolio</span>
+          </div>
+          <div>
+            <h2 id="work-title" data-i18n="work-title">Добірка візуальних робіт</h2>
+            <p class="section-lead" data-i18n="work-lead">Логотипи, айдентика, промо-графіка та веб-дизайн зібрані в одному профілі. Натисніть на Behance, щоб переглянути більше проєктів.</p>
+          </div>
+        </div>
+
+        <div class="work-grid featured-work-grid">
+          <a class="work-card large reveal-item" href="https://www.behance.net/gallery/248391417/SMILE-Brand-Identity-for-Kids-Store" target="_blank" rel="noreferrer">
+            <div class="card-media smile-media">
+              <span>01</span>
+            </div>
+            <div class="work-card-body">
+              <p data-i18n="work-1-cat">Kids store identity</p>
+              <h3 data-i18n="work-1-title">Логотипи, айдентика та візуальні системи з характером</h3>
+            </div>
+          </a>
+
+          <a class="work-card reveal-item" href="https://www.behance.net/gallery/248388401/HORIZON-Branding-Identity-for-Construction-Company" target="_blank" rel="noreferrer" style="transition-delay: 100ms">
+            <div class="card-media horizon-media">
+              <span>02</span>
+            </div>
+            <div class="work-card-body">
+              <p data-i18n="work-2-cat">Construction branding</p>
+              <h3 data-i18n="work-2-title">Банери, обкладинки та промо-графіка для бізнесу</h3>
+            </div>
+          </a>
+
+          <a class="work-card reveal-item" href="https://www.behance.net/gallery/248386155/Synapse-Technologies-Logo-Corporate-Identity-Design" target="_blank" rel="noreferrer" style="transition-delay: 200ms">
+            <div class="card-media synapse-media">
+              <span>03</span>
+            </div>
+            <div class="work-card-body">
+              <p data-i18n="work-3-cat">Tech corporate identity</p>
+              <h3 data-i18n="work-3-title">Оформлення соцмереж, презентацій та рекламних матеріалів</h3>
+            </div>
+          </a>
+
+          <a class="work-card reveal-item" href="https://www.behance.net/gallery/247963889/Artisan-Crafts" target="_blank" rel="noreferrer" style="transition-delay: 300ms">
+            <div class="card-media artisan-media">
+              <span>04</span>
+            </div>
+            <div class="work-card-body">
+              <p data-i18n="work-4-cat">Craft brand identity</p>
+              <h3 data-i18n="work-4-title">Artisan Crafts - Handmade Brand Identity</h3>
+            </div>
+          </a>
+        </div>
+        <div class="work-cta">
+          <a class="behance-button" href="https://www.behance.net/ichernievsky" target="_blank" rel="noreferrer">
+            <span class="behance-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+              </svg>
+            </span>
+            <span data-i18n="work-behance-btn">ДИВИТИСЯ ПРОЄКТИ НА BEHANCE</span>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section github-section reveal" aria-labelledby="github-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot"></span>
+            <span>GitHub / 0dych</span>
+          </div>
+          <h2 id="github-title" data-i18n="github-title">Останні публічні репозиторії</h2>
+        </div>
+        <div id="repo-grid" class="repo-grid" aria-live="polite">
+          <article class="repo-card is-loading"><span></span><span></span><span></span></article>
+          <article class="repo-card is-loading"><span></span><span></span><span></span></article>
+          <article class="repo-card is-loading"><span></span><span></span><span></span></article>
+        </div>
+      </section>
+
+      <section id="process" class="section process-section reveal" aria-labelledby="process-title">
+        <div class="section-heading-dash">
+          <div class="badge-dash">
+            <span class="status-dot"></span>
+            <span data-i18n="status-workflow">SYSTEM: EXECUTION PROCESS</span>
+          </div>
+          <h2 id="process-title" class="title-dash-small" data-i18n="process-title">Як народжується проєкт</h2>
+        </div>
+
+        <div class="workflow-wrap">
+
+          <div class="workflow-step reveal-item">
+            <div class="step-num"><span>01</span></div>
+            <div class="step-content">
+              <div class="step-tag">PHASE 01: DISCOVERY</div>
+              <h3 class="step-title">Brief</h3>
+              <p class="step-desc" data-i18n="prc-1-desc">Швидко фіксуємо мету, аудиторію, настрій та технічні обмеження.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true">
+              <svg viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <defs>
+                  <marker id="arr1" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="var(--cyan)"/>
+                  </marker>
+                </defs>
+                <path class="connector-path c1" d="M 20,2 C 42,20 42,60 20,78" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" marker-end="url(#arr1)"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="workflow-step reveal-item">
+            <div class="step-num"><span>02</span></div>
+            <div class="step-content">
+              <div class="step-tag">PHASE 02: VISUAL SYSTEM</div>
+              <h3 class="step-title">Design</h3>
+              <p class="step-desc" data-i18n="prc-2-desc">Збираю візуальну систему, макети та інтерактивні стани.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true">
+              <svg viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <defs>
+                  <marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="var(--coral)"/>
+                  </marker>
+                </defs>
+                <path class="connector-path c2" d="M 20,2 C 42,20 42,60 20,78" stroke="var(--coral)" stroke-width="2" stroke-linecap="round" marker-end="url(#arr2)"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="workflow-step reveal-item">
+            <div class="step-num"><span>03</span></div>
+            <div class="step-content">
+              <div class="step-tag">PHASE 03: ENGINEERING</div>
+              <h3 class="step-title">Build</h3>
+              <p class="step-desc" data-i18n="prc-3-desc">Переношу дизайн у код, адаптую під екрани та додаю рух.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true">
+              <svg viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+                <defs>
+                  <marker id="arr3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="var(--pink)"/>
+                  </marker>
+                </defs>
+                <path class="connector-path c3" d="M 20,2 C 42,20 42,60 20,78" stroke="var(--pink)" stroke-width="2" stroke-linecap="round" marker-end="url(#arr3)"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="workflow-step reveal-item">
+            <div class="step-num"><span>04</span></div>
+            <div class="step-content">
+              <div class="step-tag">PHASE 04: DEPLOYMENT</div>
+              <h3 class="step-title">Launch</h3>
+              <p class="step-desc" data-i18n="prc-4-desc">Перевіряємо, поліруємо, публікуємо та залишаємо проєкт готовим до розвитку.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section reveal" aria-labelledby="contact-title">
+        <div class="contact-dash-wrap">
+          <div class="contact-header-dash">
+            <div class="badge-dash">
+              <span class="status-dot"></span>
+              <span data-i18n="badge-status">READY FOR NEW PROJECTS</span>
+            </div>
+          </div>
+          
+          <div class="contact-main">
+            <div class="contact-main-text">
+              <h2 id="contact-title" class="contact-title-dash" data-i18n="contact-title">
+                Let's build something <span class="grad">extraordinary</span> together.
+              </h2>
+              
+              <div class="contact-actions">
+                <a class="contact-link-dash whatsapp" href="https://wa.me/380964098097" target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                  </svg>
+                  <span data-i18n="contact-btn">GET IN TOUCH ON WHATSAPP</span>
+                </a>
+                
+                <a class="contact-link-dash telegram" href="https://t.me/epicdramma" target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.28.28-.48.28l.19-2.85 5.177-4.677c.225-.225-.05-.35-.35-.15l-6.398 4.025-2.76-.864c-.603-.189-.614-.603.126-.893l10.783-4.156c.5-.189.938.113.712 1.253z"/>
+                  </svg>
+                  <span data-i18n="contact-tg-btn">MESSAGE ON TELEGRAM</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-visual-feature">
+              <div class="liquid-contact-area">
+                <canvas id="liquid-canvas"></canvas>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="footer-logo">
+              <img src="mylogo.png" alt="Chernievsky Ivan logo" />
+            </span>
+            <div class="footer-brand-text">
+              <strong class="footer-name" data-i18n="footer-copy">© 2026 Іван Чернієвський</strong>
+              <span class="footer-tagline" data-i18n="brand-role">Графічний дизайнер та веб-дизайнер</span>
+            </div>
+          </div>
+          <div class="footer-icons">
+            <a href="https://github.com/0dych" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.behance.net/ichernievsky" target="_blank" rel="noreferrer" aria-label="Behance">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <span class="footer-made">Designed &amp; built with ♥ in Ukraine</span>
+          <span class="footer-status"><span class="status-dot" style="width:6px;height:6px;"></span> Open for projects</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Liquid Gooey Filter -->
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <script src="script.js"></script>
+    <script src="site-data.js"></script>
+  </body>
+</html>

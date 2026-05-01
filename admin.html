@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Admin</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <section id="login-panel" class="panel login-panel">
+        <div>
+          <p class="eyebrow">Portfolio CMS</p>
+          <h1>Вход в админку</h1>
+          <p class="muted">Простая статическая панель для редактирования логотипа, главного фото, контактов и работ.</p>
+        </div>
+        <form id="login-form" class="form-grid">
+          <label>
+            Логин
+            <input id="login" autocomplete="username" required />
+          </label>
+          <label>
+            Пароль
+            <input id="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button type="submit">Войти</button>
+          <p id="login-error" class="error" role="alert"></p>
+        </form>
+      </section>
+
+      <section id="admin-panel" class="panel is-hidden">
+        <header class="admin-header">
+          <div>
+            <p class="eyebrow">Chernievsky Ivan</p>
+            <h1>Управление сайтом</h1>
+          </div>
+          <div class="header-actions">
+            <a href="index.html" target="_blank" rel="noreferrer">Открыть сайт</a>
+            <button id="logout" type="button">Выйти</button>
+          </div>
+        </header>
+
+        <form id="settings-form" class="settings">
+          <section class="editor-section">
+            <h2>Основное</h2>
+            <div class="form-grid two">
+              <label>
+                Логотип сайта
+                <input name="logo" placeholder="mylogo.png или https://..." />
+              </label>
+              <label>
+                Главное фото
+                <input name="heroPhoto" placeholder="https://... или image.jpg" />
+              </label>
+              <label>
+                WhatsApp ссылка
+                <input name="whatsapp" placeholder="https://wa.me/..." />
+              </label>
+              <label>
+                Telegram ссылка
+                <input name="telegram" placeholder="https://t.me/..." />
+              </label>
+            </div>
+          </section>
+
+          <section class="editor-section">
+            <div class="section-line">
+              <h2>Работы</h2>
+              <button id="add-work" class="secondary" type="button">Добавить работу</button>
+            </div>
+            <div id="works-editor" class="works-editor"></div>
+          </section>
+
+          <section class="editor-section">
+            <h2>Импорт / экспорт</h2>
+            <p class="muted">Для публикации на хостинге экспортируй JSON и загрузи его рядом с сайтом как <strong>portfolio-data.json</strong>.</p>
+            <textarea id="json-box" rows="8" spellcheck="false"></textarea>
+            <div class="actions">
+              <button type="submit">Сохранить</button>
+              <button id="export-json" class="secondary" type="button">Экспорт JSON</button>
+              <button id="import-json" class="secondary" type="button">Импорт из поля</button>
+              <button id="reset-data" class="danger" type="button">Сбросить</button>
+            </div>
+            <p id="status" class="status" role="status"></p>
+          </section>
+        </form>
+      </section>
+    </main>
+
+    <script src="site-data.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

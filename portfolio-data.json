@@ -1,0 +1,64 @@
+{
+  "logo": "mylogo.png",
+  "heroPhoto": "https://github.com/0dych.png?size=800",
+  "contacts": {
+    "whatsapp": "https://wa.me/380964098097",
+    "telegram": "https://t.me/epicdramma"
+  },
+  "works": [
+    {
+      "title": "SMILE - Brand Identity for Kids Store",
+      "categoryUk": "Айдентика дитячого магазину",
+      "categoryEn": "Kids store identity",
+      "descriptionUk": "Логотип, кольори та візуальна система для теплого дитячого бренду.",
+      "descriptionEn": "Logo, colors and visual system for a warm kids brand.",
+      "url": "https://www.behance.net/gallery/248391417/SMILE-Brand-Identity-for-Kids-Store",
+      "media": "smile-media"
+    },
+    {
+      "title": "HORIZON - Branding Identity for Construction Company",
+      "categoryUk": "Брендинг для будівництва",
+      "categoryEn": "Construction branding",
+      "descriptionUk": "Стримана айдентика для будівельної компанії з акцентом на довіру.",
+      "descriptionEn": "Restrained identity for a construction company focused on trust.",
+      "url": "https://www.behance.net/gallery/248388401/HORIZON-Branding-Identity-for-Construction-Company",
+      "media": "horizon-media"
+    },
+    {
+      "title": "Synapse Technologies - Logo & Corporate Identity Design",
+      "categoryUk": "Корпоративний стиль tech-бренду",
+      "categoryEn": "Tech corporate identity",
+      "descriptionUk": "Логотип і корпоративна система для технологічної компанії.",
+      "descriptionEn": "Logo and corporate system for a technology company.",
+      "url": "https://www.behance.net/gallery/248386155/Synapse-Technologies-Logo-Corporate-Identity-Design",
+      "media": "synapse-media"
+    },
+    {
+      "title": "Artisan Crafts - Handmade Brand Identity",
+      "categoryUk": "Айдентика ремісничого бренду",
+      "categoryEn": "Craft brand identity",
+      "descriptionUk": "Візуальна система для handmade-проєкту з теплим натуральним настроєм.",
+      "descriptionEn": "Visual system for a handmade project with a warm natural mood.",
+      "url": "https://www.behance.net/gallery/247963889/Artisan-Crafts",
+      "media": "artisan-media"
+    },
+    {
+      "title": "SMILE Custom - Clickable Storefront Demo",
+      "categoryUk": "Клікабельне демо e-commerce",
+      "categoryEn": "Clickable e-commerce demo",
+      "descriptionUk": "E-commerce storefront для Smile Custom: Next.js, React, TypeScript, Tailwind CSS, Framer Motion, next-intl для UK/HU локалізації, каталог, сторінка товару, checkout, власна адмінка для керування товарами, банерами й контентом та API-архітектура.",
+      "descriptionEn": "E-commerce storefront for Smile Custom built with Next.js, React, TypeScript, Tailwind CSS, Framer Motion and next-intl for UK/HU localization, with catalog, product detail, checkout, custom admin panel for products, banners and content management, plus an API-driven architecture.",
+      "url": "demos/smile-app/index.html",
+      "media": "smile-custom-media"
+    },
+    {
+      "title": "Nexus EDMS - Clickable App Demo",
+      "categoryUk": "Клікабельне демо EDMS/CRM",
+      "categoryEn": "Clickable EDMS/CRM demo",
+      "descriptionUk": "Nexus EDMS/CRM: React, Vite, TypeScript, Tailwind CSS, glass UI, Express/Node.js backend, Prisma + SQLite, JWT/RBAC, Socket.IO та WebRTC для аудіо- і відеодзвінків. Модулі: dashboard, документи, службові записки, задачі, закупівлі, логістика, активи, ролі, чат і сповіщення.",
+      "descriptionEn": "Nexus EDMS/CRM built with React, Vite, TypeScript, Tailwind CSS, glass UI, Express/Node.js backend, Prisma + SQLite, JWT/RBAC, Socket.IO and WebRTC for audio and video calls. Modules include dashboard, documents, memos, tasks, procurement, logistics, assets, roles, chat and notifications.",
+      "url": "demos/edms-click/index.html",
+      "media": "edms-media"
+    }
+  ]
+}
