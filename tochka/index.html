@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tochka НАССР — Редактор схем пест-контролю та НАССР для Windows</title>
+    <meta
+      name="description"
+      content="Професійна офлайн-програма для створення схем будівель, пест-контролю, потоків НАССР, журналів моніторингу та QR-наліпок. Спеціальна ціна запуску для перших 15 клієнтів — 3 499 грн."
+    />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&family=Unbounded:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Tochka НАССР">
+        <span class="brand-mark">
+          <img src="logo.png" alt="Tochka НАССР логотип" />
+        </span>
+        <span class="brand-text">
+          <strong>Tochka НАССР</strong>
+          <small>by Chernievsky Ivan · v1.2.1</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Навігація">
+        <a href="../index.html">← Головна</a>
+        <a href="#screenshots">Скріншоти</a>
+        <a href="#features">Можливості</a>
+        <a href="#pricing">Ціна</a>
+        <a href="#how">Як купити</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="header-cta" href="#pricing">
+        <span>3 499 ₴ · АКЦІЯ</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero-dash" aria-labelledby="hero-title">
+        <div class="hero-copy-dash">
+          <div class="eyebrow-dash">
+            <span class="status-dot"></span>
+            <span>WINDOWS DESKTOP · 100% ОФЛАЙН · СПЕЦЦІНА ЗАПУСКУ</span>
+          </div>
+
+          <h1 id="hero-title" class="title-dash">
+            TOCHKA<br /><span class="grad">НАССР</span><br /><span class="amp">&amp;</span> ПЕСТ-КОНТРОЛЬ
+          </h1>
+
+          <p class="hero-lead-dash">
+            Створюйте професійні схеми будівель, 3-рівневого пест-контролю та потоків НАССР за 10 хвилин.
+            Багатоповерховий PDF, Розумний аудит, Журнал моніторингу та QR-наліпки на пастки — <b>без щомісячних підписок</b>.
+          </p>
+
+          <div class="hero-actions-dash">
+            <a
+              class="btn-dash primary"
+              href="https://drive.google.com/file/d/1UyIX2XYB6blcd3cR7b4-YL4jxLajKtsr/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>ЗАВАНТАЖИТИ ДЕМО (0 ₴)</span>
+              <span aria-hidden="true">⬇</span>
+            </a>
+            <a class="btn-dash secondary" href="#pricing">
+              <span>КУПИТИ ЗА 3 499 ₴</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <strong class="accent">3 499 ₴</strong>
+              <span>ПЕРШІ 15 КЛІЄНТІВ</span>
+            </div>
+            <div class="stat-pill">
+              <strong>5</strong>
+              <span>БЕЗКОШТ. ЗАПУСКІВ</span>
+            </div>
+            <div class="stat-pill">
+              <strong>0 ₴/МІС</strong>
+              <span>НАЗАВЖДИ ОФЛАЙН</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-dash">
+          <div class="hero-window">
+            <div class="window-bar">
+              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>Tochka НАССР v1.2.1 — Редактор схем (Windows x64)</span>
+              <span style="color: var(--accent);">● LIVE UI</span>
+            </div>
+            <div class="window-shot" data-zoom>
+              <img
+                src="screenshots/shot-editor.png"
+                alt="Інтерфейс Tochka НАССР — схема харчового цеху з потоками та штампом"
+              />
+              <span class="zoom-pill">🔍 Натисніть для збільшення</span>
+            </div>
+            <div class="window-footer">
+              <span><strong>Експорт:</strong> PDF (A4/A3) · PNG · CSV · Журнал · QR-наліпки</span>
+              <span style="color: var(--cyan);">Ed25519 Offline License</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticker hero-ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span>Пест-контроль</span><span class="ticker-sep">✦</span>
+            <span class="is-outline">Схеми НАССР</span><span class="ticker-sep">✦</span>
+            <span>Розумний аудит</span><span class="ticker-sep">✦</span>
+            <span class="is-outline">QR-наліпки</span><span class="ticker-sep">✦</span>
+            <span>Журнал моніторингу</span><span class="ticker-sep">✦</span>
+            <span class="is-outline">Підкладка PDF/БТІ</span><span class="ticker-sep">✦</span>
+            <span>100% Офлайн</span><span class="ticker-sep">✦</span>
+            <!-- duplicate for seamless loop -->
+            <span>Пест-контроль</span><span class="ticker-sep">✦</span>
+            <span class="is-outline">Схеми НАССР</span><span class="ticker-sep">✦</span>
+            <span>Розумний аудит</span><span class="ticker-sep">✦</span>
+            <span class="is-outline">QR-наліпки</span><span class="ticker-sep">✦</span>
+            <span>Журнал моніторингу</span><span class="ticker-sep">✦</span>
+            <span class="is-outline">Підкладка PDF/БТІ</span><span class="ticker-sep">✦</span>
+            <span>100% Офлайн</span><span class="ticker-sep">✦</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVE SCREENSHOTS -->
+      <section id="screenshots" class="section" aria-labelledby="shots-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot cyan"></span>
+            <span>Живі скріншоти програми · Версія 1.2.1</span>
+          </div>
+          <h2 id="shots-title">Подивіться, як виглядає робота в Tochka НАССР</h2>
+          <p class="section-lead">
+            Реальні знімки інтерфейсу без рендерів. Клікніть на будь-який екран, щоб відкрити його у повній роздільній здатності.
+          </p>
+        </div>
+
+        <div class="shots-tabs" role="tablist">
+          <button type="button" class="shot-tab active">01 · Редактор та схема</button>
+          <button type="button" class="shot-tab">02 · Розумний аудит НАССР</button>
+          <button type="button" class="shot-tab">03 · Пест-контроль (3 рівні)</button>
+          <button type="button" class="shot-tab">04 · Готові шаблони</button>
+        </div>
+
+        <div class="shots-stage">
+          <div class="shots-stage-img" data-zoom>
+            <img
+              id="stage-img"
+              src="screenshots/shot-editor.png"
+              alt="Редактор схем будівель, зонування та потоків НАССР"
+            />
+            <span class="zoom-pill">🔍 Відкрити на весь екран</span>
+          </div>
+          <div class="shots-stage-meta">
+            <div>
+              <h3 id="stage-title">Редактор схем будівель, зонування та потоків НАССР</h3>
+              <p id="stage-desc">
+                Архітектурні стіни, магнітні двері/вікна, гігієнічні зони з площею в м², авто-легенда, компас і штамп підприємства з 4 полями підписів.
+              </p>
+            </div>
+            <a class="btn-dash primary" href="#pricing" style="height: 44px; padding: 0 20px;">
+              <span>КУПИТИ ЗА 3 499 ₴</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="shots-thumbs">
+          <button type="button" class="shot-thumb active">
+            <img src="screenshots/shot-editor.png" alt="Редактор схем" />
+            <span>01 · Редактор і штамп</span>
+          </button>
+          <button type="button" class="shot-thumb">
+            <img src="screenshots/shot-audit.png" alt="Розумний аудит НАССР" />
+            <span>02 · Аудит НАССР</span>
+          </button>
+          <button type="button" class="shot-thumb">
+            <img src="screenshots/shot-custom.png" alt="Схема 3-рівневого пест-контролю складу" />
+            <span>03 · Пест-контроль (3 рівні)</span>
+          </button>
+          <button type="button" class="shot-thumb">
+            <img src="screenshots/shot-pest.png" alt="Готові шаблони" />
+            <span>04 · Готові шаблони</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="section" aria-labelledby="features-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot"></span>
+            <span>Повний інструментарій для пест-контролю та НАССР</span>
+          </div>
+          <h2 id="features-title">Усе для проходження аудиту в одній програмі</h2>
+          <p class="section-lead">
+            Замінює AutoCAD, Word і Excel: малюйте план по фото/PDF, розставляйте пастки й друкуйте повний пакет документів для Держпродспоживслужби або ISO 22000.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="spotlight-card feature-card">
+            <span class="card-num">01 / АРХІТЕКТУРА ТА ПІДКЛАДКА</span>
+            <h3>План з нуля або по фото / PDF БТІ</h3>
+            <p>
+              Завантажуйте скан або PDF техпаспорта як підкладку, регулюйте прозорість та обводьте стіни. Магнітні вікна, двері, ворота, сходи, огорожа території, 9 блоків обладнання та лінійка в метрах.
+            </p>
+            <div class="feature-tags">
+              <span>PDF / PNG / JPG</span>
+              <span>Кімната за 1 клік</span>
+              <span>Масштаб 1:100</span>
+            </div>
+          </article>
+
+          <article class="spotlight-card feature-card">
+            <span class="card-num">02 / ПЕСТ-КОНТРОЛЬ І НАССР</span>
+            <h3>3 рівні захисту + автонумерація</h3>
+            <p>
+              Готові бібліотеки: Рівень 1 (приманки), Рівень 2 (механічні), Рівень 3 (живоловки, УФ-лампи, повзаючі комахи), ККТ, Санітарні точки та Вода. Статуси точок (норма / поїдання / активність) та власні препарати.
+            </p>
+            <div class="feature-tags">
+              <span>Автонумерація</span>
+              <span>Власні фігури</span>
+              <span>Бродіфакум / ін.</span>
+            </div>
+          </article>
+
+          <article class="spotlight-card feature-card">
+            <span class="card-num">03 / РОЗУМНИЙ АУДИТ</span>
+            <h3>Автоперевірка порушень НАССР</h3>
+            <p>
+              Вбудований аудитор миттєво підсвічує перетини брудних і чистих потоків, завелику відстань між пастками (&gt;15 м / &gt;10 м), родентициди в чистих зонах та УФ-лампи над столами. При експорті в PDF підказки ховаються автоматично.
+            </p>
+            <div class="feature-tags">
+              <span>Перетин потоків</span>
+              <span>Крок пасток</span>
+              <span>ISO 22000</span>
+            </div>
+          </article>
+
+          <article class="spotlight-card feature-card">
+            <span class="card-num">04 / ДОКУМЕНТИ ТА QR-НАЛІПКИ</span>
+            <h3>PDF, Журнал моніторингу та QR-бірки</h3>
+            <p>
+              Багатоповерховий векторний PDF (A4/A3) з авто-легендою, логотипом клієнта й штампом на 4 підписи. В 1 клік генерує <b>Журнал контролю пасток (PDF)</b>, <b>аркуш А4 фірмових наліпок із QR-кодом</b> та CSV-реєстр для Excel.
+            </p>
+            <div class="feature-tags">
+              <span>QR-наліпки A4</span>
+              <span>Журнал PDF</span>
+              <span>Експорт Excel</span>
+            </div>
+          </article>
+
+          <article class="spotlight-card feature-card">
+            <span class="card-num">05 / ПОВЕРХИ ТА ШАРИ</span>
+            <h3>Кілька схем з одного плану</h3>
+            <p>
+              Створюйте окремі вкладки (<i>Територія</i>, <i>Поверх 1</i>, <i>Поверх 2</i>), дублюйте планування та перемикайте шари (Пест-контроль / Потоки / Зони) — друкуйте різні документи без повторного малювання.
+            </p>
+            <div class="feature-tags">
+              <span>Вкладки поверхів</span>
+              <span>Пресети шарів</span>
+              <span>Автосейв</span>
+            </div>
+          </article>
+
+          <article class="spotlight-card feature-card">
+            <span class="card-num">06 / БЕЗПЕКА ТА АВТОНОМНІСТЬ</span>
+            <h3>100% офлайн, без хмар і підписок</h3>
+            <p>
+              Програма встановлюється на ваш Windows-ПК і працює без інтернету. Усі проєкти клієнтів зберігаються локально. Криптографічна активація ключем <code>TH1-...</code> вводиться один раз і діє безстроково.
+            </p>
+            <div class="feature-tags">
+              <span>Windows 10 / 11</span>
+              <span>UA / EN інтерфейс</span>
+              <span>Ed25519 ключ</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRICING / SPECIAL OFFER -->
+      <section id="pricing" class="section" aria-labelledby="pricing-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot"></span>
+            <span>Спеціальна пропозиція запуску · Економія 2 001 ₴</span>
+          </div>
+          <h2 id="pricing-title">Обирайте зручний формат ліцензії</h2>
+          <p class="section-lead">
+            Окупається буквально з 1–2 замовлених схем. Платите один раз — користуєтесь назавжди без прихованих щомісячних платежів.
+          </p>
+        </div>
+
+        <div class="promo-banner">
+          <div class="promo-banner-left">
+            <span class="promo-pill">🔥 АКЦІЯ -36%</span>
+            <div>
+              <strong>Спеціальна ціна для перших 15 клієнтів — 3 499 грн замість 5 500 грн</strong>
+              <p>Після продажу перших 15 ліцензій вартість повернеться до стандартних 5 500 грн.</p>
+            </div>
+          </div>
+          <div class="promo-slots">
+            <span>ЛІМІТ: 15 ЛІЦЕНЗІЙ</span>
+            <div class="slots-bar" aria-hidden="true"><div class="slots-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Demo -->
+          <article class="spotlight-card price-card">
+            <div class="price-top">
+              <h3>Демо-версія</h3>
+              <span class="price-tag">Спробувати</span>
+            </div>
+            <div class="price-amount">
+              <span class="price-val">0 ₴</span>
+            </div>
+            <div class="price-sub">5 повноцінних запусків без обмежень</div>
+            <ul class="price-list">
+              <li>Повний функціонал редактора v1.2.1</li>
+              <li>Усі шаблони, аудит НАССР, PDF і QR-наліпки</li>
+              <li>Встановлення за 30 секунд (Windows Setup)</li>
+              <li>Одразу перевірте на реальному об’єкті</li>
+            </ul>
+            <div class="price-actions">
+              <a
+                class="btn-dash secondary"
+                href="https://drive.google.com/file/d/1UyIX2XYB6blcd3cR7b4-YL4jxLajKtsr/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>ЗАВАНТАЖИТИ SETUP</span>
+                <span>⬇</span>
+              </a>
+              <div class="price-note">Windows 10 / 11 (x64) · Google Drive</div>
+            </div>
+          </article>
+
+          <!-- Featured Launch Price -->
+          <article class="spotlight-card price-card featured">
+            <div class="price-top">
+              <h3>Перші 15 клієнтів</h3>
+              <span class="price-tag">ХІТ · -36%</span>
+            </div>
+            <div class="price-amount">
+              <span class="price-val">3 499 ₴</span>
+              <span class="price-old">5 500 ₴</span>
+            </div>
+            <div class="price-sub">Разова оплата · Безстрокова ліцензія на 1 ПК</div>
+            <ul class="price-list">
+              <li><b>Персональний офлайн-ключ Ed25519</b> назавжди</li>
+              <li>Безлімітна кількість проєктів, поверхів і PDF</li>
+              <li>Журнал моніторингу + QR-наліпки на пастки</li>
+              <li>Безкоштовні оновлення в межах версії 1.x</li>
+              <li>PDF-інструкція та пряма підтримка розробника</li>
+            </ul>
+            <div class="price-actions">
+              <a
+                class="btn-dash primary"
+                href="https://t.me/epicdramma?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8%20Tochka%20%D0%9D%D0%90%D0%A1%D0%A1%D0%A0%20%D0%B7%D0%B0%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D1%96%D0%BD%D0%BE%D1%8E%203%20499%20%D0%B3%D1%80%D0%BD."
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>КУПИТИ В TELEGRAM</span>
+                <span>↗</span>
+              </a>
+              <div class="price-note">
+                або <a href="https://wa.me/380964098097?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8%20Tochka%20%D0%9D%D0%90%D0%A1%D0%A1%D0%A0%20%D0%B7%D0%B0%203%20499%20%D0%B3%D1%80%D0%BD." target="_blank" rel="noreferrer">написати у WhatsApp ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Company 3 PCs -->
+          <article class="spotlight-card price-card">
+            <div class="price-top">
+              <h3>Компанія (3 ПК)</h3>
+              <span class="price-tag">Для команд</span>
+            </div>
+            <div class="price-amount">
+              <span class="price-val">9 499 ₴</span>
+              <span class="price-old">16 500 ₴</span>
+            </div>
+            <div class="price-sub">~3 166 ₴ за робоче місце · Безстроково</div>
+            <ul class="price-list">
+              <li><b>3 окремі ліцензійні ключі</b> для співробітників</li>
+              <li>Ідеально для пест-контроль компаній та аудиторів</li>
+              <li>Усі оновлення версії 1.x та пріоритетна підтримка</li>
+              <li>Допомога з налаштуванням фірмових штампів</li>
+            </ul>
+            <div class="price-actions">
+              <a
+                class="btn-dash secondary"
+                href="https://t.me/epicdramma?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A6%D1%96%D0%BA%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20Tochka%20%D0%9D%D0%90%D0%A1%D0%A1%D0%A0%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20(3%20%D0%9F%D0%9A)%20%D0%B7%D0%B0%209%20499%20%D0%B3%D1%80%D0%BD."
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>ЗАМОВИТИ ДЛЯ КОМАНДИ</span>
+                <span>↗</span>
+              </a>
+              <div class="price-note">Можлива оплата на ФОП або картку</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="section" aria-labelledby="how-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot cyan"></span>
+            <span>Активація за 2 хвилини</span>
+          </div>
+          <h2 id="how-title">Як почати роботу з Tochka НАССР</h2>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-step spotlight-card">
+            <div class="step-top">
+              <div class="step-num">01</div>
+              <div class="step-tag">INSTALL</div>
+            </div>
+            <h3 class="step-title">Встановіть Setup</h3>
+            <p class="step-desc">
+              <a href="https://drive.google.com/file/d/1UyIX2XYB6blcd3cR7b4-YL4jxLajKtsr/view?usp=sharing" target="_blank" rel="noreferrer" style="color: var(--accent); text-decoration: underline;">Завантажте інсталятор Windows ↗</a> — одразу доступно 5 безкоштовних запусків із повним функціоналом.
+            </p>
+          </article>
+
+          <article class="workflow-step spotlight-card">
+            <div class="step-top">
+              <div class="step-num">02</div>
+              <div class="step-tag">TEST</div>
+            </div>
+            <h3 class="step-title">Перевірте в роботі</h3>
+            <p class="step-desc">Створіть реальну схему об’єкта, протестуйте Розумний аудит, роздрукуйте PDF та QR-наліпки.</p>
+          </article>
+
+          <article class="workflow-step spotlight-card">
+            <div class="step-top">
+              <div class="step-num">03</div>
+              <div class="step-tag">MACHINE ID</div>
+            </div>
+            <h3 class="step-title">Надішліть Код ПК</h3>
+            <p class="step-desc">Скопіюйте 8-значний Код ПК (наприклад, <code>A7F2-9C14</code>) у вікні ліцензії та надішліть у Telegram або WhatsApp.</p>
+          </article>
+
+          <article class="workflow-step spotlight-card">
+            <div class="step-top">
+              <div class="step-num">04</div>
+              <div class="step-tag">LIFETIME</div>
+            </div>
+            <h3 class="step-title">Вставте ключ TH1</h3>
+            <p class="step-desc">Отримайте персональний криптографічний ключ, вставте його один раз — програма активована назавжди офлайн.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <div class="badge-dash">
+            <span class="status-dot emerald"></span>
+            <span>Часті запитання</span>
+          </div>
+          <h2 id="faq-title">Відповіді перед покупкою</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button type="button" class="faq-q">
+              <span>Чи потрібен інтернет для роботи програми?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a">
+              Ні. Tochka НАССР працює на 100% офлайн. Усі креслення, підкладки та проєкти клієнтів зберігаються виключно на вашому комп’ютері — жодних хмарних підписок і передачі даних на сторонні сервери.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              <span>Чи підходять PDF-схеми для перевірок Держпродспоживслужби та аудитів ISO 22000 / FSSC?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a">
+              Так. Схеми формуються за стандартами НАССР: чітке зонування (брудна/чиста зона), стрілки потоків без перетинів, 3 рівні захисту пест-контролю, автоматична легенда з підрахунком точок, компас та офіційний штамп із 4 полями підписів («Затверджено», «Погоджено», «Ознайомлений», «Дезінфектор»).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              <span>Чи можна працювати по готовому плану БТІ (фото або PDF)?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a">
+              Так, ви можете завантажити будь-який PDF-файл, скан або фото плану приміщення як підкладку, налаштувати її масштаб і прозорість, заблокувати та розставити точки НАССР просто поверх плану або акуратно обвести стіни.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              <span>На скільки комп’ютерів діє одна ліцензія за 3 499 грн?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a">
+              Стандартна ліцензія діє безстроково на 1 комп’ютер (Windows 10 / 11). Якщо потрібно встановити програму для команди на 3+ робочі місця, доступний вигідний пакет «Компанія (3 ПК)» за 9 499 грн.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT CTA -->
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <div class="contact-dash-wrap">
+          <div class="contact-header-dash">
+            <div class="badge-dash">
+              <span class="status-dot"></span>
+              <span>ШВИДКА ВИДАЧА КЛЮЧІВ · ПІДТРИМКА РОЗРОБНИКА</span>
+            </div>
+            <span class="contact-loc">ВІДПОВІДАЮ ПРОТЯГОМ ДНЯ · УКРАЇНА</span>
+          </div>
+
+          <h2 id="contact-title" class="contact-title-dash">
+            Зафіксуйте спецціну <span class="grad">3 499 ₴</span> серед перших 15 клієнтів.
+          </h2>
+
+          <div class="contact-actions">
+            <a
+              class="contact-link-dash telegram"
+              href="https://t.me/epicdramma?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8%20Tochka%20%D0%9D%D0%90%D0%A1%D0%A1%D0%A0%20%D0%B7%D0%B0%203%20499%20%D0%B3%D1%80%D0%BD."
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.28.28-.48.28l.19-2.85 5.177-4.677c.225-.225-.05-.35-.35-.15l-6.398 4.025-2.76-.864c-.603-.189-.614-.603.126-.893l10.783-4.156c.5-.189.938.113.712 1.253z"/>
+              </svg>
+              <span>НАПИСАТИ В TELEGRAM</span>
+            </a>
+
+            <a
+              class="contact-link-dash whatsapp"
+              href="https://wa.me/380964098097?text=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%82%D0%B8%20Tochka%20%D0%9D%D0%90%D0%A1%D0%A1%D0%A0%20%D0%B7%D0%B0%203%20499%20%D0%B3%D1%80%D0%BD."
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+              </svg>
+              <span>ЗВ’ЯЗАТИСЯ У WHATSAPP</span>
+            </a>
+
+            <a
+              class="contact-link-dash site"
+              href="https://0dych.github.io/chernievsky/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>САЙТ РОЗРОБНИКА ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">
+            <img src="logo.png" alt="Tochka НАССР" />
+          </span>
+          <div class="footer-brand-text">
+            <strong class="footer-name">© 2026 Іван Чернієвський · Tochka НАССР</strong>
+            <span class="footer-tagline">Редактор схем будівель, пест-контролю та документації НАССР</span>
+          </div>
+        </div>
+        <div class="footer-icons">
+          <a href="https://0dych.github.io/chernievsky/" target="_blank" rel="noreferrer" aria-label="Портфоліо">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+          <a href="https://github.com/0dych" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.behance.net/ichernievsky" target="_blank" rel="noreferrer" aria-label="Behance">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>Designed &amp; built with ♥ in Ukraine</span>
+        <span>Tochka НАССР v1.2.1 · Windows 10 / 11 (x64)</span>
+      </div>
+    </footer>
+
+    <!-- Mobile Floating Bottom Dock -->
+    <nav class="mobile-dock" aria-label="Мобільна навігація">
+      <a href="#screenshots"><span>Скріни</span></a>
+      <a href="#features"><span>Функції</span></a>
+      <a href="#pricing"><span>3 499 ₴</span></a>
+      <a href="#contact"><span>Купити</span></a>
+    </nav>
+
+    <!-- Fullscreen Screenshot Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Перегляд скріншота">
+      <div class="lightbox-inner">
+        <div class="lightbox-bar">
+          <span id="lightbox-caption"></span>
+          <button type="button" id="lightbox-close" class="lightbox-close">✕ Закрити (Esc)</button>
+        </div>
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
