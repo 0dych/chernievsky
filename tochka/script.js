@@ -22,14 +22,16 @@ function updateScroll() {
 window.addEventListener('scroll', updateScroll, { passive: true });
 updateScroll();
 
-// Spotlight card radial glow tracking
-document.querySelectorAll('.spotlight-card').forEach((card) => {
-  card.addEventListener('pointermove', (e) => {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-    card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+// Spotlight card radial glow tracking (fine pointer / desktop only)
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.spotlight-card').forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+    });
   });
-});
+}
 
 // Interactive Live Screenshots Switcher
 const SHOTS = [
@@ -61,19 +63,52 @@ const stageDesc = document.getElementById('stage-desc');
 const tabBtns = document.querySelectorAll('.shot-tab');
 const thumbBtns = document.querySelectorAll('.shot-thumb');
 
+let currentShotIdx = 0;
+
 function selectShot(idx) {
-  const shot = SHOTS[idx];
+  const safeIdx = ((idx % SHOTS.length) + SHOTS.length) % SHOTS.length;
+  const shot = SHOTS[safeIdx];
   if (!shot || !stageImg) return;
+  currentShotIdx = safeIdx;
   stageImg.src = shot.src;
   stageImg.alt = shot.title;
   if (stageTitle) stageTitle.textContent = shot.title;
   if (stageDesc) stageDesc.textContent = shot.desc;
-  tabBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
-  thumbBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
+  tabBtns.forEach((b, i) => {
+    const active = i === safeIdx;
+    b.classList.toggle('active', active);
+    if (active && window.innerWidth <= 760) {
+      b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  });
+  thumbBtns.forEach((b, i) => b.classList.toggle('active', i === safeIdx));
 }
 
 tabBtns.forEach((btn, idx) => btn.addEventListener('click', () => selectShot(idx)));
 thumbBtns.forEach((btn, idx) => btn.addEventListener('click', () => selectShot(idx)));
+
+// Touch swipe support for screenshots stage on mobile
+let lastSwipeAt = 0;
+const stageWrap = document.querySelector('.shots-stage-img');
+if (stageWrap) {
+  let touchStartX = 0;
+  let touchStartY = 0;
+  stageWrap.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  stageWrap.addEventListener('touchend', (e) => {
+    if (!e.changedTouches.length) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+      lastSwipeAt = Date.now();
+      selectShot(dx < 0 ? currentShotIdx + 1 : currentShotIdx - 1);
+    }
+  }, { passive: true });
+}
 
 // Fullscreen Lightbox for screenshots
 const lightbox = document.getElementById('lightbox');
@@ -97,6 +132,7 @@ function closeLightbox() {
 
 document.querySelectorAll('[data-zoom]').forEach((el) => {
   el.addEventListener('click', () => {
+    if (Date.now() - lastSwipeAt < 350) return;
     const img = el.querySelector('img');
     if (img) openLightbox(img.src, img.alt);
   });
