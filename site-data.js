@@ -1,6 +1,7 @@
 (function () {
   const STORAGE_KEY = "chernievsky-portfolio-data";
   const MEDIA_CLASSES = [
+    "tochka-media",
     "profdezzak-media",
     "smile-media",
     "horizon-media",
@@ -22,6 +23,19 @@
       linkedin: "https://www.linkedin.com/in/7chernievsky/"
     },
     works: [
+      {
+        title: "Tochka НАССР — Desktop App (Windows)",
+        categoryUk: "Власний продукт · Windows App",
+        categoryEn: "Own Product · Windows Desktop App",
+        descriptionUk:
+          "Професійний офлайн-редактор схем будівель, 3-рівневого пест-контролю та потоків НАССР: багатоповерховий PDF, Розумний аудит, Журнал моніторингу, QR-наліпки на пастки та захист Ed25519.",
+        descriptionEn:
+          "Professional offline Windows CAD editor for building plans, 3-level pest control, and HACCP flows: multi-page PDF, Smart HACCP Audit, Monitoring Log, QR trap labels, and Ed25519 licensing.",
+        url: "tochka/index.html",
+        media: "tochka-media",
+        type: "web",
+        featured: true
+      },
       {
         title: "PROFDEZZAK — Corporate Website",
         categoryUk: "Веб-розробка · Live сайт",
@@ -113,6 +127,9 @@
 
   function getWorkBadge(work, lang) {
     const url = (work.url || "").toLowerCase();
+    if (url.includes("tochka/")) {
+      return { text: lang === "en" ? "WINDOWS APP · LAUNCH" : "WINDOWS APP · 3 499 ₴", kind: "live" };
+    }
     if (url.includes("profdezzak")) {
       return { text: lang === "en" ? "LIVE WEBSITE" : "LIVE САЙТ", kind: "live" };
     }
@@ -191,6 +208,13 @@
 
   function createMediaPreview(mediaClass, work) {
     const frag = document.createDocumentFragment();
+    if (mediaClass === "tochka-media") {
+      const wrap = document.createElement("div");
+      wrap.style.cssText = "position:absolute;inset:0;overflow:hidden;background:#0f1117;";
+      wrap.innerHTML = `<img src="tochka/screenshots/shot-editor.png" alt="Tochka НАССР" style="width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0.92;" />`;
+      frag.append(wrap);
+      return frag;
+    }
     if (mediaClass === "profdezzak-media") {
       const browser = document.createElement("div");
       browser.className = "preview-browser";
